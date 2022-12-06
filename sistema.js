@@ -1,19 +1,19 @@
-addEventListener("DOMContentLoaded", (e)=> {
-    var chec1 = document.getElementById("check3")
-    var chec2 = document.getElementById("check4")
-    var chec3 = document.getElementById("check2")
-    var chekear = document.getElementById("check1");
-    var list = document.getElementById("list");
+addEventListener("DOMContentLoaded", (e)=>{
+    let form=document.querySelector('#form') 
+    let contadorPasos = 1
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();       
+        let datos = Object.fromEntries(new FormData(e.target))
+        let input = datos.arroz
+        let tabla =document.querySelector("tbody");
+        tabla.insertAdjacentHTML("beforeend",`
+                <tr>
+                    <td> ${contadorPasos}  </td>
+                    <td> ${input}  </td>
+                </tr>
+                `)
+            contadorPasos++
 
-    chekear.addEventListener("click", (e)=>
-    {
-        if (chekear.checked && chec1.checked && chec2.checked && chec3.checked) {
-            list.innerHTML = "Haz sido agilizado tu dia. ";
-        } else{
-            list.innerHTML = "Tienes tareas por terminar.";
-        }
-
-    })
-
+    })               
 })
 
