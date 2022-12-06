@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    background-color:rgb(226, 226, 226) ;
+}
+p{
+    display:inline-block;
+}
+.p1{
+width:auto;
+height: 50px;
+}
+.p1::before{
+font-size: 20px;
+content: '(2 * 5) < 8 OR ((4 * 6) > (2 * 5) )';
+background-color: bisque;
+}
+.p1::after{
+position: absolute;
+top: 50px;
+left: 10px;
+opacity: 0;
+content: 'False : (10) < 8  OR  True : ((24) > (10))';
+transition: all 0.3s;
+}
+
+.p1:hover::after{
+margin-top: 10px;
+font-size: 20px;
+opacity: 1;
+}
+.p2{
+    width: auto;
+    height: 100px;
+    display: block;
+    margin-top: 50px;
+
+}
+.p2::before{
+background-color: bisque;
+font-size: 20px;
+content:'(4+ 5) < 3 AND ( ( 5 * 5 ) + (4 + 25 < 3) )';
+}
+.p2::after{
+position:absolute;
+top: 180px;
+left: 10px;
+content: 'False : (9) < 3  AND  ((25) + (29 < 3))';
+font-size: 10px;
+opacity: 0;
+transition: all 0.3s;
+}
+.p2:hover::after{
+opacity: 1;
+font-size: 20px;
+}
+h2{
+    width: 300px;
+    height: 100px;
+    margin-left: 43%;
+}
+table{
+
+margin-left: 50px;
+    display: inline-block;
+}
+.tabla{
+    margin-left: 25%;
+}
+th{
+    background-color: bisque;
+    width: 100px;
+    height: auto;
+}
+td{
+    text-align: center;
+    background-color: azure;
+}
